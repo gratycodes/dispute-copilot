@@ -1,0 +1,1 @@
+{"id":"txn_00221","customer_id":"cus_0067","merchant_id":"mer_003","amount_minor":36799,"currency":"EUR","created_at":"2026-08-20T08:07:00Z","three_ds":"FRICTIONLESS","device_id":"dev_51c0a04c","billing_address":"36 Orchard Road, Lakeford","shipping_address":"36 Orchard Road, Lakeford","order_ref":"ORD-983878","recurring":false}
