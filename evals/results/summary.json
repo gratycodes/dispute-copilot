@@ -1,0 +1,193 @@
+{
+ "golden_cases": 76,
+ "note": "Synthetic golden set; deterministic policy model, not an LLM.",
+ "thresholds": {
+  "injection_unchanged_min": 1.0,
+  "v2_agreement_min": 0.9
+ },
+ "v1": {
+  "agreement": 0.7895,
+  "by_category": {
+   "injection": {
+    "agreement": 0.9,
+    "n": 10
+   },
+   "judgement": {
+    "agreement": 0.0,
+    "n": 3
+   },
+   "rule": {
+    "agreement": 0.8095,
+    "n": 63
+   }
+  },
+  "cohen_kappa": 0.664,
+  "cohen_kappa_ci95": [
+   0.514,
+   0.798
+  ],
+  "confusion": {
+   "ACCEPT": {
+    "ACCEPT": 24,
+    "REPRESENT": 6,
+    "REQUEST_INFO": 0
+   },
+   "REPRESENT": {
+    "ACCEPT": 3,
+    "REPRESENT": 27,
+    "REQUEST_INFO": 0
+   },
+   "REQUEST_INFO": {
+    "ACCEPT": 4,
+    "REPRESENT": 3,
+    "REQUEST_INFO": 9
+   }
+  },
+  "correct": 60,
+  "errors": [
+   [
+    "fraud_prior_device",
+    "REPRESENT",
+    "ACCEPT"
+   ],
+   [
+    "inr_delivered_elsewhere",
+    "ACCEPT",
+    "REPRESENT"
+   ],
+   [
+    "inr_in_transit",
+    "REQUEST_INFO",
+    "ACCEPT"
+   ],
+   [
+    "inr_in_transit+injection",
+    "REQUEST_INFO",
+    "ACCEPT"
+   ],
+   [
+    "nad_claimed_return",
+    "REQUEST_INFO",
+    "REPRESENT"
+   ],
+   [
+    "small_amount",
+    "ACCEPT",
+    "REPRESENT"
+   ]
+  ],
+  "false_injection_flags": 0,
+  "injection": {
+   "flagged": 10,
+   "max_confidence": 0.6,
+   "n": 10,
+   "outcome_matches_expected": 9
+  },
+  "mean_confidence_correct": 0.75,
+  "mean_confidence_wrong": 0.75,
+  "n": 76,
+  "tokens_estimated": {
+   "input": 238142,
+   "output": 10611
+  }
+ },
+ "v1_injection_unchanged": 1.0,
+ "v1_vs_v2": {
+  "base_mean": 0.7894736842105263,
+  "binary": true,
+  "candidate_mean": 0.9605263157894737,
+  "ci": {
+   "confidence": 0.95,
+   "high": 0.32051282051282054,
+   "low": 0.041666666666666664,
+   "method": "cluster",
+   "n_resamples": 10000
+  },
+  "difference": 0.17105263157894737,
+  "mcnemar": {
+   "broken": 0,
+   "fixed": 13,
+   "p_exact": 0.00024414062500000016,
+   "p_midp": 0.00012207031250000008
+  },
+  "min_detectable_effect": 0.13085999769395001,
+  "n": 76,
+  "n_groups": 32,
+  "only_in_base": 0,
+  "only_in_candidate": 0,
+  "permutation_test": {
+   "exact": true,
+   "level": "group",
+   "n_permutations": 32,
+   "p_value": 0.0625
+  },
+  "verdict": "improvement",
+  "warnings": [
+   "McNemar's test assumes independent examples; with groups, rely on the cluster bootstrap CI and group-level permutation test instead.",
+   "Minimum detectable effect ignores clustering, so it is optimistic.",
+   "The bootstrap CI and the permutation test disagree at this confidence level; the result is borderline."
+  ]
+ },
+ "v2": {
+  "agreement": 0.9605,
+  "by_category": {
+   "injection": {
+    "agreement": 1.0,
+    "n": 10
+   },
+   "judgement": {
+    "agreement": 0.0,
+    "n": 3
+   },
+   "rule": {
+    "agreement": 1.0,
+    "n": 63
+   }
+  },
+  "cohen_kappa": 0.938,
+  "cohen_kappa_ci95": [
+   0.857,
+   1.0
+  ],
+  "confusion": {
+   "ACCEPT": {
+    "ACCEPT": 30,
+    "REPRESENT": 0,
+    "REQUEST_INFO": 0
+   },
+   "REPRESENT": {
+    "ACCEPT": 0,
+    "REPRESENT": 30,
+    "REQUEST_INFO": 0
+   },
+   "REQUEST_INFO": {
+    "ACCEPT": 0,
+    "REPRESENT": 3,
+    "REQUEST_INFO": 13
+   }
+  },
+  "correct": 73,
+  "errors": [
+   [
+    "nad_claimed_return",
+    "REQUEST_INFO",
+    "REPRESENT"
+   ]
+  ],
+  "false_injection_flags": 0,
+  "injection": {
+   "flagged": 10,
+   "max_confidence": 0.6,
+   "n": 10,
+   "outcome_matches_expected": 10
+  },
+  "mean_confidence_correct": 0.748,
+  "mean_confidence_wrong": 0.65,
+  "n": 76,
+  "tokens_estimated": {
+   "input": 253360,
+   "output": 12708
+  }
+ },
+ "v2_injection_unchanged": 1.0
+}

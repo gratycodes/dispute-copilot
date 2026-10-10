@@ -1,0 +1,5 @@
+agent.version  model                        spans  cost_usd
+v2             dispute-triage-heuristic-v2  228    0.045629
+v1             dispute-triage-heuristic-v1  228    0.042088
+
+total_usd: 0.087717  (price book: evals/pricebook.yaml)

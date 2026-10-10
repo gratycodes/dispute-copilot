@@ -1,0 +1,17 @@
+# Hypothetical price book for otel-genai-cost, used only to show the cost
+# pipeline working on this project's traces.
+#
+# The deterministic triage model is not a paid model and its token counts are
+# estimates (characters / 4). Here it is priced at the "example-small" rate from
+# otel-genai-cost's example price book (examples/pricebook.yaml at commit
+# 629572f), which is itself illustrative. Treat the output as "what this traffic
+# would cost at a small-model rate", not as a real bill.
+#
+# Prices are USD per 1,000,000 tokens.
+version: "dispute-copilot-hypothetical-2026-10"
+currency: USD
+models:
+  - model: dispute-triage-heuristic-*
+    provider: deterministic
+    input: 0.15
+    output: 0.60
