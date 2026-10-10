@@ -12,3 +12,6 @@ playwright-report/
 *.log
 .local/
 evals/out/
+disputes-service.log
+agent.log
+.deps/

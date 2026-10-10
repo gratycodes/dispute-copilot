@@ -1,0 +1,64 @@
+# Full stack on synthetic data:
+#   docker compose up --build
+#   open http://localhost:5173
+services:
+  postgres:
+    image: postgres:17
+    environment:
+      POSTGRES_DB: disputes
+      POSTGRES_USER: disputes
+      POSTGRES_PASSWORD: disputes
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U disputes"]
+      interval: 2s
+      retries: 30
+
+  kafka:
+    image: apache/kafka:4.2.2
+    environment:
+      KAFKA_NODE_ID: 1
+      KAFKA_PROCESS_ROLES: broker,controller
+      KAFKA_LISTENERS: PLAINTEXT://:9092,CONTROLLER://:9093
+      KAFKA_ADVERTISED_LISTENERS: PLAINTEXT://kafka:9092
+      KAFKA_CONTROLLER_LISTENER_NAMES: CONTROLLER
+      KAFKA_LISTENER_SECURITY_PROTOCOL_MAP: CONTROLLER:PLAINTEXT,PLAINTEXT:PLAINTEXT
+      KAFKA_CONTROLLER_QUORUM_VOTERS: 1@kafka:9093
+      KAFKA_OFFSETS_TOPIC_REPLICATION_FACTOR: 1
+      KAFKA_TRANSACTION_STATE_LOG_REPLICATION_FACTOR: 1
+      KAFKA_TRANSACTION_STATE_LOG_MIN_ISR: 1
+      KAFKA_NUM_PARTITIONS: 3
+
+  disputes-service:
+    build:
+      context: .
+      dockerfile: disputes-service/Dockerfile
+    environment:
+      DB_URL: jdbc:postgresql://postgres:5432/disputes
+      KAFKA_BOOTSTRAP_SERVERS: kafka:9092
+      OUTBOX_PUBLISHER: kafka
+    ports:
+      - "8080:8080"
+    depends_on:
+      postgres:
+        condition: service_healthy
+      kafka:
+        condition: service_started
+
+  agent:
+    build:
+      context: .
+      dockerfile: agent/Dockerfile
+    environment:
+      DISPUTES_API: http://disputes-service:8080
+      AGENT_MODEL: v2
+    depends_on:
+      - disputes-service
+
+  console:
+    build:
+      context: .
+      dockerfile: console/Dockerfile
+    ports:
+      - "5173:80"
+    depends_on:
+      - disputes-service

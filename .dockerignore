@@ -1,0 +1,9 @@
+**/node_modules
+**/target
+**/.venv
+.venv
+**/dist
+**/test-results
+**/playwright-report
+evals/out
+.git
