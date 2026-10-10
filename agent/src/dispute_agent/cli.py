@@ -63,6 +63,7 @@ def main(argv: list[str] | None = None) -> int:
     g.add_argument("--watch", type=float, metavar="SECONDS", help="poll for RECEIVED disputes")
     args = p.parse_args(argv)
     logging.basicConfig(level=logging.INFO, format="%(asctime)s %(levelname)s %(message)s")
+    logging.getLogger("httpx").setLevel(logging.WARNING)
 
     mcp_args = ["-m", "dispute_mcp", "--api", args.api]
     if args.policy:

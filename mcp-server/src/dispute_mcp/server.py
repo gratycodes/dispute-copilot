@@ -9,6 +9,7 @@ contests, closes or changes a dispute.
 from __future__ import annotations
 
 import argparse
+import logging
 import json
 import sys
 import time
@@ -116,6 +117,7 @@ def main(argv: list[str] | None = None) -> None:
     p.add_argument("--policy", default=None, help="policy markdown (default: repo policy/)")
     p.add_argument("--audit", default=None, help="append tool calls to this JSONL file")
     args = p.parse_args(argv)
+    logging.getLogger("httpx").setLevel(logging.WARNING)
     backend: DisputeBackend = HttpBackend(args.api) if args.api else FixtureBackend(args.fixture)
     policy = PolicyIndex.from_file(args.policy or default_policy_path())
     server = build_server(backend, policy, audit=AuditLog(args.audit))

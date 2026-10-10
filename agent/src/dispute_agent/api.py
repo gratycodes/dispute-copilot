@@ -11,7 +11,7 @@ class DisputesApi:
     def __init__(self, base_url: str, *, client: httpx.Client | None = None) -> None:
         self._c = client or httpx.Client(base_url=base_url.rstrip("/"), timeout=10.0)
 
-    def pending(self, limit: int = 50) -> list[dict[str, Any]]:
+    def pending(self, limit: int = 500) -> list[dict[str, Any]]:
         r = self._c.get("/api/disputes", params={"status": "RECEIVED", "limit": limit})
         r.raise_for_status()
         return r.json()["items"]
