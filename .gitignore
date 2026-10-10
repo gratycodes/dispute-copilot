@@ -1,0 +1,14 @@
+.venv/
+__pycache__/
+*.pyc
+.pytest_cache/
+*.egg-info/
+target/
+node_modules/
+dist/
+test-results/
+playwright-report/
+.vite/
+*.log
+.local/
+evals/out/

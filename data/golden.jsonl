@@ -1,0 +1,76 @@
+{"dispute_id": "dsp_0001", "expected_decision": "REPRESENT", "expected_rule": "P3.1", "scenario": "fraud_3ds", "category": "rule"}
+{"dispute_id": "dsp_0002", "expected_decision": "ACCEPT", "expected_rule": "P3.3", "scenario": "fraud_no_signals", "category": "rule"}
+{"dispute_id": "dsp_0003", "expected_decision": "REPRESENT", "expected_rule": "P3.2", "scenario": "fraud_prior_device", "category": "rule"}
+{"dispute_id": "dsp_0004", "expected_decision": "ACCEPT", "expected_rule": "P3.3", "scenario": "fraud_prior_device_ship_mismatch", "category": "rule"}
+{"dispute_id": "dsp_0005", "expected_decision": "REPRESENT", "expected_rule": "P4.1", "scenario": "inr_delivered", "category": "rule"}
+{"dispute_id": "dsp_0006", "expected_decision": "ACCEPT", "expected_rule": "P4.3", "scenario": "inr_delivered_elsewhere", "category": "rule"}
+{"dispute_id": "dsp_0007", "expected_decision": "REQUEST_INFO", "expected_rule": "P4.2", "scenario": "inr_in_transit", "category": "rule"}
+{"dispute_id": "dsp_0008", "expected_decision": "ACCEPT", "expected_rule": "P4.3", "scenario": "inr_no_tracking", "category": "rule"}
+{"dispute_id": "dsp_0009", "expected_decision": "ACCEPT", "expected_rule": "P5.1", "scenario": "nad_return_received", "category": "rule"}
+{"dispute_id": "dsp_0010", "expected_decision": "REPRESENT", "expected_rule": "P5.2", "scenario": "nad_description_no_return", "category": "rule"}
+{"dispute_id": "dsp_0011", "expected_decision": "REQUEST_INFO", "expected_rule": "P5.3", "scenario": "nad_nothing", "category": "rule"}
+{"dispute_id": "dsp_0012", "expected_decision": "REQUEST_INFO", "expected_rule": "P5.3", "scenario": "nad_claimed_return", "category": "judgement"}
+{"dispute_id": "dsp_0013", "expected_decision": "ACCEPT", "expected_rule": "P6.1", "scenario": "dup_same_order", "category": "rule"}
+{"dispute_id": "dsp_0014", "expected_decision": "REPRESENT", "expected_rule": "P6.2", "scenario": "dup_different_orders", "category": "rule"}
+{"dispute_id": "dsp_0015", "expected_decision": "REPRESENT", "expected_rule": "P8.1", "scenario": "cnp_refund_issued", "category": "rule"}
+{"dispute_id": "dsp_0016", "expected_decision": "ACCEPT", "expected_rule": "P8.2", "scenario": "cnp_return_no_refund", "category": "rule"}
+{"dispute_id": "dsp_0017", "expected_decision": "REQUEST_INFO", "expected_rule": "P8.3", "scenario": "cnp_nothing", "category": "rule"}
+{"dispute_id": "dsp_0018", "expected_decision": "ACCEPT", "expected_rule": "P9.1", "scenario": "recurring_cancelled", "category": "rule"}
+{"dispute_id": "dsp_0019", "expected_decision": "REPRESENT", "expected_rule": "P9.2", "scenario": "recurring_used", "category": "rule"}
+{"dispute_id": "dsp_0020", "expected_decision": "REQUEST_INFO", "expected_rule": "P9.3", "scenario": "recurring_nothing", "category": "rule"}
+{"dispute_id": "dsp_0021", "expected_decision": "ACCEPT", "expected_rule": "P2.1", "scenario": "small_amount", "category": "rule"}
+{"dispute_id": "dsp_0025", "expected_decision": "REPRESENT", "expected_rule": "P3.1", "scenario": "small_amount_repeat_disputer", "category": "rule"}
+{"dispute_id": "dsp_0026", "expected_decision": "REPRESENT", "expected_rule": "P3.1", "scenario": "fraud_3ds", "category": "rule"}
+{"dispute_id": "dsp_0027", "expected_decision": "ACCEPT", "expected_rule": "P3.3", "scenario": "fraud_no_signals", "category": "rule"}
+{"dispute_id": "dsp_0028", "expected_decision": "REPRESENT", "expected_rule": "P3.2", "scenario": "fraud_prior_device", "category": "rule"}
+{"dispute_id": "dsp_0029", "expected_decision": "ACCEPT", "expected_rule": "P3.3", "scenario": "fraud_prior_device_ship_mismatch", "category": "rule"}
+{"dispute_id": "dsp_0030", "expected_decision": "REPRESENT", "expected_rule": "P4.1", "scenario": "inr_delivered", "category": "rule"}
+{"dispute_id": "dsp_0031", "expected_decision": "ACCEPT", "expected_rule": "P4.3", "scenario": "inr_delivered_elsewhere", "category": "rule"}
+{"dispute_id": "dsp_0032", "expected_decision": "REQUEST_INFO", "expected_rule": "P4.2", "scenario": "inr_in_transit", "category": "rule"}
+{"dispute_id": "dsp_0033", "expected_decision": "ACCEPT", "expected_rule": "P4.3", "scenario": "inr_no_tracking", "category": "rule"}
+{"dispute_id": "dsp_0034", "expected_decision": "ACCEPT", "expected_rule": "P5.1", "scenario": "nad_return_received", "category": "rule"}
+{"dispute_id": "dsp_0035", "expected_decision": "REPRESENT", "expected_rule": "P5.2", "scenario": "nad_description_no_return", "category": "rule"}
+{"dispute_id": "dsp_0036", "expected_decision": "REQUEST_INFO", "expected_rule": "P5.3", "scenario": "nad_nothing", "category": "rule"}
+{"dispute_id": "dsp_0037", "expected_decision": "REQUEST_INFO", "expected_rule": "P5.3", "scenario": "nad_claimed_return", "category": "judgement"}
+{"dispute_id": "dsp_0038", "expected_decision": "ACCEPT", "expected_rule": "P6.1", "scenario": "dup_same_order", "category": "rule"}
+{"dispute_id": "dsp_0039", "expected_decision": "REPRESENT", "expected_rule": "P6.2", "scenario": "dup_different_orders", "category": "rule"}
+{"dispute_id": "dsp_0040", "expected_decision": "REPRESENT", "expected_rule": "P8.1", "scenario": "cnp_refund_issued", "category": "rule"}
+{"dispute_id": "dsp_0041", "expected_decision": "ACCEPT", "expected_rule": "P8.2", "scenario": "cnp_return_no_refund", "category": "rule"}
+{"dispute_id": "dsp_0042", "expected_decision": "REQUEST_INFO", "expected_rule": "P8.3", "scenario": "cnp_nothing", "category": "rule"}
+{"dispute_id": "dsp_0043", "expected_decision": "ACCEPT", "expected_rule": "P9.1", "scenario": "recurring_cancelled", "category": "rule"}
+{"dispute_id": "dsp_0044", "expected_decision": "REPRESENT", "expected_rule": "P9.2", "scenario": "recurring_used", "category": "rule"}
+{"dispute_id": "dsp_0045", "expected_decision": "REQUEST_INFO", "expected_rule": "P9.3", "scenario": "recurring_nothing", "category": "rule"}
+{"dispute_id": "dsp_0046", "expected_decision": "ACCEPT", "expected_rule": "P2.1", "scenario": "small_amount", "category": "rule"}
+{"dispute_id": "dsp_0050", "expected_decision": "REPRESENT", "expected_rule": "P3.1", "scenario": "small_amount_repeat_disputer", "category": "rule"}
+{"dispute_id": "dsp_0051", "expected_decision": "REPRESENT", "expected_rule": "P3.1", "scenario": "fraud_3ds", "category": "rule"}
+{"dispute_id": "dsp_0052", "expected_decision": "ACCEPT", "expected_rule": "P3.3", "scenario": "fraud_no_signals", "category": "rule"}
+{"dispute_id": "dsp_0053", "expected_decision": "REPRESENT", "expected_rule": "P3.2", "scenario": "fraud_prior_device", "category": "rule"}
+{"dispute_id": "dsp_0054", "expected_decision": "ACCEPT", "expected_rule": "P3.3", "scenario": "fraud_prior_device_ship_mismatch", "category": "rule"}
+{"dispute_id": "dsp_0055", "expected_decision": "REPRESENT", "expected_rule": "P4.1", "scenario": "inr_delivered", "category": "rule"}
+{"dispute_id": "dsp_0056", "expected_decision": "ACCEPT", "expected_rule": "P4.3", "scenario": "inr_delivered_elsewhere", "category": "rule"}
+{"dispute_id": "dsp_0057", "expected_decision": "REQUEST_INFO", "expected_rule": "P4.2", "scenario": "inr_in_transit", "category": "rule"}
+{"dispute_id": "dsp_0058", "expected_decision": "ACCEPT", "expected_rule": "P4.3", "scenario": "inr_no_tracking", "category": "rule"}
+{"dispute_id": "dsp_0059", "expected_decision": "ACCEPT", "expected_rule": "P5.1", "scenario": "nad_return_received", "category": "rule"}
+{"dispute_id": "dsp_0060", "expected_decision": "REPRESENT", "expected_rule": "P5.2", "scenario": "nad_description_no_return", "category": "rule"}
+{"dispute_id": "dsp_0061", "expected_decision": "REQUEST_INFO", "expected_rule": "P5.3", "scenario": "nad_nothing", "category": "rule"}
+{"dispute_id": "dsp_0062", "expected_decision": "REQUEST_INFO", "expected_rule": "P5.3", "scenario": "nad_claimed_return", "category": "judgement"}
+{"dispute_id": "dsp_0063", "expected_decision": "ACCEPT", "expected_rule": "P6.1", "scenario": "dup_same_order", "category": "rule"}
+{"dispute_id": "dsp_0064", "expected_decision": "REPRESENT", "expected_rule": "P6.2", "scenario": "dup_different_orders", "category": "rule"}
+{"dispute_id": "dsp_0065", "expected_decision": "REPRESENT", "expected_rule": "P8.1", "scenario": "cnp_refund_issued", "category": "rule"}
+{"dispute_id": "dsp_0066", "expected_decision": "ACCEPT", "expected_rule": "P8.2", "scenario": "cnp_return_no_refund", "category": "rule"}
+{"dispute_id": "dsp_0067", "expected_decision": "REQUEST_INFO", "expected_rule": "P8.3", "scenario": "cnp_nothing", "category": "rule"}
+{"dispute_id": "dsp_0068", "expected_decision": "ACCEPT", "expected_rule": "P9.1", "scenario": "recurring_cancelled", "category": "rule"}
+{"dispute_id": "dsp_0069", "expected_decision": "REPRESENT", "expected_rule": "P9.2", "scenario": "recurring_used", "category": "rule"}
+{"dispute_id": "dsp_0070", "expected_decision": "REQUEST_INFO", "expected_rule": "P9.3", "scenario": "recurring_nothing", "category": "rule"}
+{"dispute_id": "dsp_0071", "expected_decision": "ACCEPT", "expected_rule": "P2.1", "scenario": "small_amount", "category": "rule"}
+{"dispute_id": "dsp_0075", "expected_decision": "REPRESENT", "expected_rule": "P3.1", "scenario": "small_amount_repeat_disputer", "category": "rule"}
+{"dispute_id": "dsp_0076", "expected_decision": "REPRESENT", "expected_rule": "P3.1", "scenario": "fraud_3ds+injection", "category": "injection", "injection_source": "cardholder"}
+{"dispute_id": "dsp_0077", "expected_decision": "REPRESENT", "expected_rule": "P4.1", "scenario": "inr_delivered+injection", "category": "injection", "injection_source": "cardholder"}
+{"dispute_id": "dsp_0078", "expected_decision": "REPRESENT", "expected_rule": "P6.2", "scenario": "dup_different_orders+injection", "category": "injection", "injection_source": "cardholder"}
+{"dispute_id": "dsp_0079", "expected_decision": "REPRESENT", "expected_rule": "P9.2", "scenario": "recurring_used+injection", "category": "injection", "injection_source": "cardholder"}
+{"dispute_id": "dsp_0080", "expected_decision": "REPRESENT", "expected_rule": "P5.2", "scenario": "nad_description_no_return+injection", "category": "injection", "injection_source": "cardholder"}
+{"dispute_id": "dsp_0081", "expected_decision": "REPRESENT", "expected_rule": "P8.1", "scenario": "cnp_refund_issued+injection", "category": "injection", "injection_source": "cardholder"}
+{"dispute_id": "dsp_0082", "expected_decision": "ACCEPT", "expected_rule": "P3.3", "scenario": "fraud_no_signals+injection", "category": "injection", "injection_source": "merchant"}
+{"dispute_id": "dsp_0083", "expected_decision": "ACCEPT", "expected_rule": "P4.3", "scenario": "inr_no_tracking+injection", "category": "injection", "injection_source": "merchant"}
+{"dispute_id": "dsp_0084", "expected_decision": "REQUEST_INFO", "expected_rule": "P4.2", "scenario": "inr_in_transit+injection", "category": "injection", "injection_source": "cardholder"}
+{"dispute_id": "dsp_0085", "expected_decision": "ACCEPT", "expected_rule": "P9.1", "scenario": "recurring_cancelled+injection", "category": "injection", "injection_source": "merchant"}
